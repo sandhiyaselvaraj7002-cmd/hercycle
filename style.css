@@ -1,0 +1,300 @@
+body {
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #a80144,
+    #861a45
+  );
+
+  overflow-x: hidden;
+}
+
+.container {
+
+  max-width: 430px;
+
+  margin: auto;
+
+  padding: 15px;
+}
+
+.hero {
+
+  position: relative;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  margin-bottom: 20px;
+
+  animation: fadeIn 1s ease;
+}
+
+.hero img {
+
+  width: 100%;
+
+  height: 250px;
+
+  object-fit: cover;
+}
+
+.overlay {
+
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  right: 0;
+
+  padding: 20px;
+
+  background: linear-gradient(
+    transparent,
+    rgba(0,0,0,0.7)
+  );
+
+  color: rgb(240, 237, 237);
+}
+
+.quote-card,
+.card {
+
+  background: rgba(248, 188, 218, 0.9);
+
+  backdrop-filter: blur(10px);
+
+  padding: 20px;
+
+  border-radius: 24px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 6px 20px rgba(255,105,180,0.15);
+
+  animation: slideUp 0.8s ease;
+}
+
+.quote-card {
+
+  background: linear-gradient(
+    135deg,
+    #ff7eb3,
+    #ffb6d9
+  );
+
+  color: white;
+
+  line-height: 1.7;
+}
+
+input,
+select,
+textarea {
+
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 12px;
+
+  border-radius: 14px;
+
+  border: none;
+
+  background: #fff4f8;
+
+  box-sizing: border-box;
+
+  font-size: 15px;
+}
+
+textarea {
+
+  height: 100px;
+}
+
+button {
+
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 18px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #580202,
+    #580404
+  );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+
+  transform: scale(1.02);
+}
+
+.history-btn {
+
+  background: linear-gradient(
+    135deg,
+    #490000,
+    #50122c
+  );
+}
+
+.symptoms label {
+
+  display: block;
+
+  margin-top: 12px;
+}
+
+#predictionResult,
+#dayInfo,
+#aiInsight {
+
+  margin-top: 18px;
+
+  background: #fff4f8;
+
+  padding: 15px;
+
+  border-radius: 16px;
+
+  line-height: 1.8;
+
+  color: #050505;
+}
+
+.fc-toolbar-title {
+
+  color: #ff4f93;
+
+  font-size: 24px !important;
+}
+
+.fc-button {
+
+  background: #ff4f93 !important;
+
+  border: none !important;
+
+  border-radius: 10px !important;
+}
+
+.fc-daygrid-day:hover {
+
+  background: #ffe3ef;
+}
+
+.fc-daygrid-event {
+
+  background: linear-gradient(
+    135deg,
+    #ff6fa5,
+    #ff9cc2
+  ) !important;
+
+  border: none !important;
+
+  border-radius: 10px !important;
+
+  padding: 5px !important;
+}
+
+.floating {
+
+  position: fixed;
+
+  width: 25px;
+
+  height: 25px;
+
+  background: rgba(255,105,180,0.3);
+
+  border-radius: 50%;
+
+  animation: float 10s infinite linear;
+}
+
+.floating1 {
+
+  top: 10%;
+
+  left: 10%;
+}
+
+.floating2 {
+
+  top: 50%;
+
+  left: 80%;
+}
+
+.floating3 {
+
+  top: 80%;
+
+  left: 20%;
+}
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

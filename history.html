@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>HerCycle Calendar</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="manifest" href="manifest.json">
+
+  <meta
+    name="theme-color"
+    content="#ff4f93"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css"
+  />
+
+</head>
+
+<body>
+
+<div class="floating floating1"></div>
+<div class="floating floating2"></div>
+<div class="floating floating3"></div>
+
+<div class="container">
+
+  <div class="card">
+
+    <h1>🌸 Pink Cycle Calendar</h1>
+
+    <div id="calendar"></div>
+
+  </div>
+
+  <div class="card">
+
+    <h2>✨ AI Cycle Insights</h2>
+
+    <div id="aiInsight">
+      Your insights will appear here 🌸
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <h2>🌸 Selected Day Info</h2>
+
+    <div id="dayInfo">
+      Click a highlighted date ✨
+    </div>
+
+  </div>
+
+  <a href="index.html">
+
+    <button>
+      Back To Home
+    </button>
+
+  </a>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
+<script src="script.js"></script>
+
+<script>
+
+if ("serviceWorker" in navigator) {
+
+  navigator.serviceWorker.register(
+    "service-worker.js"
+  );
+
+}
+
+</script>
+
+</body>
+</html>

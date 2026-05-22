@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>HerCycle</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="manifest" href="manifest.json">
+
+  <meta
+    name="theme-color"
+    content="#ff4f93"
+  >
+
+</head>
+
+<body>
+
+<div class="floating floating1"></div>
+<div class="floating floating2"></div>
+<div class="floating floating3"></div>
+
+<div class="container">
+
+  <div class="hero">
+
+    <img
+      src="images (1).jpg"
+      alt="women"
+    >
+
+    <div class="overlay">
+
+      <h1>🌸</h1>
+
+      <p>
+        you are strong than you think.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="quote-card">
+
+    “A strong woman understands her body,
+    respects her emotions,
+    and owns her power.” ✨
+
+  </div>
+
+  <div class="card prediction-card">
+
+    <h2>🌸 Cycle Prediction</h2>
+
+    <input
+      type="date"
+      id="lastPeriod"
+    >
+
+    <input
+      type="number"
+      id="cycleLength"
+      placeholder="Cycle Length"
+    >
+
+    <button onclick="predictPeriod()">
+      Predict Next Period
+    </button>
+
+    <div id="predictionResult"></div>
+
+  </div>
+
+  <div class="card">
+
+    <h2>Daily Log</h2>
+
+    <input type="date" id="date">
+
+    <select id="mood">
+
+      <option value="">Choose Mood</option>
+
+      <option>😊 Happy</option>
+      <option>😴 Tired</option>
+      <option>😣 Cramps</option>
+      <option>😢 Emotional</option>
+      <option>😌 Calm</option>
+
+    </select>
+
+    <select id="flow">
+
+      <option value="">Select Flow</option>
+
+      <option>🩸 Low</option>
+      <option>🩸🩸 Medium</option>
+      <option>🩸🩸🩸 Heavy</option>
+
+    </select>
+
+    <div class="symptoms">
+
+      <label>
+        <input
+          type="checkbox"
+          value="Headache"
+          class="symptom"
+        >
+        Headache
+      </label>
+
+      <label>
+        <input
+          type="checkbox"
+          value="Cramps"
+          class="symptom"
+        >
+        Cramps
+      </label>
+
+      <label>
+        <input
+          type="checkbox"
+          value="Acne"
+          class="symptom"
+        >
+        Acne
+      </label>
+
+      <label>
+        <input
+          type="checkbox"
+          value="Back Pain"
+          class="symptom"
+        >
+        Back Pain
+      </label>
+
+    </div>
+
+    <textarea
+      id="note"
+      placeholder="Write notes..."
+    ></textarea>
+
+    <button onclick="saveLog()">
+      Save Log
+    </button>
+
+    <a href="history.html">
+
+      <button class="history-btn">
+        Open Calendar 🌸
+      </button>
+
+    </a>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+if ("serviceWorker" in navigator) {
+
+  navigator.serviceWorker.register(
+    "service-worker.js"
+  );
+
+}
+
+</script>
+
+</body>
+</html>
