@@ -1,15 +1,17 @@
-const CACHE_NAME = "hercycle-cache-v1";
+const CACHE_NAME = "hercycle-cache-v2";
 
 const urlsToCache = [
-  "/",
-  "index.html",
-  "history.html",
-  "style.css",
-  "script.js",
-  "manifest.json"
+  "./",
+  "./index.html",
+  "./history.html",
+  "./style.css",
+  "./script.js",
+  "./manifest.json"
 ];
 
 self.addEventListener("install", (event) => {
+
+  self.skipWaiting();
 
   event.waitUntil(
 
@@ -20,6 +22,32 @@ self.addEventListener("install", (event) => {
         return cache.addAll(urlsToCache);
 
       })
+
+  );
+
+});
+
+self.addEventListener("activate", (event) => {
+
+  event.waitUntil(
+
+    caches.keys().then((keys) => {
+
+      return Promise.all(
+
+        keys.map((key) => {
+
+          if(key !== CACHE_NAME) {
+
+            return caches.delete(key);
+
+          }
+
+        })
+
+      );
+
+    })
 
   );
 
